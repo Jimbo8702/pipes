@@ -32,6 +32,7 @@ func (p *Pipeline[T]) Run(input <-chan T) <-chan T {
 }
 
 
+
 // func sliceToChannel(nums []int) <-chan int {
 // 	out := make(chan int)
 // 	go func() {

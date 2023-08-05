@@ -12,3 +12,10 @@ func makeStageFunc[T any](operation func(T) T) StageFunc[T] {
 		return out
 	}
 }
+
+func withParam[T any](operation func(T, T) T, param T) func(T) T {
+	return func(n T) T {
+		return operation(n, param)
+	}
+}
+
